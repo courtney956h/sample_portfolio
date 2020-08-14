@@ -1,0 +1,34 @@
+
+@media only screen and (max-width: 800px) {
+
+    #header { position: relative; }
+    #header.on .open_gnb span { background: #fff; }
+    #header .nav { 
+        background: rgba(0,0,0,0.8);
+        position: fixed; width: 100%;
+        top: 0; right: 0; height: auto;
+        text-align: left; }
+    #header .nav .depth1 > li { display: block; width: 100%; }
+    #header .nav .depth1 > li > a { font-size: 15px; 
+        color: #fff; padding: 20px 20px;
+        display: block; border-bottom: 1px solid #eee;}
+
+
+
+    .section-outer .slide-outer h1 { font-size: 50px; }
+
+    /* #header.on .open_gnb span { background: #000; }
+    #header .nav { opacity: 0;
+        background: rgba(0,0,0,0.3); color: #000;
+        position: absolute; width: 100%; height: auto;
+        top: 0; right: 0; transform: translateY(0%);
+        text-align: left; padding: 0;
+        transition: all 0.5s; }
+    #header.on .nav { opacity: 1; top: 100%; }
+    #header .nav .depth1 > li { display: block;
+        float: left; width: 100%; }
+    #header .nav .depth1 > li > a { display: block; 
+        font-size: 15px; padding: 10px 30px;
+        border-bottom: 1px solid #fff; } */
+}
+
