@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 .row { max-width: 1200px; margin: 0 auto; 
     padding: 15px 0; }
@@ -44,19 +44,21 @@ body, html, #wrap { height: 100%; }
     color: #fff; }
 
 
-
-
+/* 첫번째 section - intro */
 .section-outer { height: 100%; }
 .section-outer .section { height: 100%; }
 .section-outer .slide-outer { height: 100%; }
 .section-outer .slide-outer h1 { font-size: 60px; 
     font-family: 'Merriweather'; font-weight: 700;
     text-align: center; color: #fff;
-    border-bottom: 2px solid #fff; padding-bottom: 10px;
+    padding-bottom: 10px;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%); z-index: 9999; }
-
+.section-outer .slide-outer h1 > p { font-size: 15px; 
+    margin: 20px 0; font-weight: normal; }
+.section-outer .slide-outer h1 strong { font-size: 18px; 
+    font-weight: bold; }
 
 /* .section-outer .slide-outer .outlayer { display: none; position: fixed; 
     top: 0; bottom: 0; left: 0; right: 0; 
@@ -80,23 +82,222 @@ body, html, #wrap { height: 100%; }
 
 
 /* 동그라미 버튼 */
-.slide-outer .slick-dots { 
-    position: absolute; bottom: 20px; 
-    width: 100%; text-align: center; }
+.slide-outer .slick-dots {  position: absolute; 
+    bottom: 20px; width: 100%; 
+    text-align: center; }
 .slide-outer .slick-dots li { display: inline-block; }
 .slide-outer .slick-dots li button { width: 12px; height: 12px;
-    border-radius: 50%; background: rgba(0,0,0,0.5);
-    text-indent: -99999px; overflow: hidden; margin: 0 5px; }
+    border-radius: 50%; 
+    background: rgba(0,0,0,0.5);
+    text-indent: -99999px; 
+    overflow: hidden; 
+    margin: 0 5px; }
 .slide-outer .slick-dots li.slick-active button { 
-    background: rgba(0,0,0,0.9); border-radius: 50px; width: 30px; }
+    background: rgba(0,0,0,0.9); 
+    border-radius: 50px; width: 30px; }
 
 /* 슬라이드 자동재생/멈춤버튼 */
-.slide-outer .plpa { font-size: 12px; color: rgba(0,0,0,0.9);
-    background: none; position: absolute; 
-    bottom: 23px; left: 50%; margin-left: 55px; }
+.slide-outer .plpa { font-size: 12px; 
+    color: rgba(0,0,0,0.9);
+    background: none; 
+    position: absolute; 
+    bottom: 23px; left: 50%; 
+    margin-left: 55px; }
+
+
+
+/* 두번째 section - aboutme*/
+.about_header { font-family: 'Nanum Myeongjo', serif; 
+    position: relative; 
+    height: 100%; }
+.about_header .h_txt { color: #000; 
+    display: block;
+    text-align: left;
+    padding: 290px 0px 330px 80px; }
+.about_header .h_txt h1 { font-size: 35px; 
+    font-weight: 400; 
+    display: inline-block; }
+.about_header .h_txt strong { font-size: 50px; 
+    font-weight: 700; 
+    transition: all 0.8s; }
+.about_header:hover .h_txt strong{ background: #000;
+    color: #fff; }
+.about_header span { border: 2px solid #000;
+    border-radius: 50px; 
+    padding: 10px 20px;
+    margin-left: 80px; 
+    background: none; 
+    font-family: 'Merriweather';
+    font-size: 12px; 
+    font-weight: bold;
+    position: absolute;
+    top: 60%; 
+    transition: all 0.5s; }
+.about_header span:hover { background: #000;
+    color: #fff; }
 
 
 
 
+.h_profile { background-image: url(../images/h1.jpg);
+    height: 320px; width: 100%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative; }
+.h_profile .overlay { background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0; }
+.m_profile { font-family: 'Merriweather'; 
+    text-align: center; padding: 120px 0;
+    color: #fff; 
+    height: 100%; }
+.m_profile h2 { font-size: 42px; }
+.m_profile span  { display: block; 
+    font-size: 15px; 
+    padding: 30px 0 80px 0;}
 
 
+
+/* 세번째 section - aboutdetail */
+.t_profile { height: 100%; width: 100%; }
+.t_profile .pro_p { margin: 100px 0px 100px 180px;
+    width: 30%; float: left; }
+.t_profile ul { font-family: 'Merriweather'; 
+    color: #333; font-size: 15px;
+    display: inline-block;
+    width: 45%; 
+    margin: 200px 0; }
+.t_profile ul li { padding-top: 30px; }
+.t_profile ul li span { color: #000;
+    font-size: 20px; }
+
+
+
+/* 네번째 section - portfolio */
+.portfolio { font-family: 'Merriweather'; 
+    text-align: center; 
+    margin-top: 200px; }
+.portfolio h2, .skills h2 { font-size: 42px; }
+.portfolio span, .skills span { display: block; 
+    font-size: 15px; 
+    padding: 30px 0 80px 0;}
+.portfolio ul.gallery { height: 100%; }
+.portfolio ul.gallery li { float: left; 
+    width: 25%; height: 20%; 
+    overflow: hidden;
+    padding: 8px; }
+.portfolio ul.gallery li p:nth-of-type(1) { font-size: 15px; 
+    margin: 10px 0 8px; }
+.portfolio ul.gallery li p:nth-of-type(2) { font-size: 13px; 
+    margin-bottom: 8px; color: #777; }
+.portfolio ul.gallery li .g_txt { display: none; }
+
+/* 갤러리 팝업 */
+.galleryPopup { opacity: 0;
+    position: fixed; 
+    top: 50%; bottom: 50%; left: 50%; right: 50%;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999999;
+    transition: all 0.5s;
+    overflow: hidden; }
+.galleryPopup.on { opacity: 1;
+    top: 0%; bottom: 0%; left: 0%; right: 0%;
+    overflow: visible; }
+.galleryPopup .popupList { position: absolute; 
+    top: 50%; left: 5%; right: 50%;
+    transform: translateY(-50%);
+    text-align: left; }
+.galleryPopup .popupList .close { position: absolute;
+    top: -10%; left: 0%; right: 50%;
+    font-size: 22px;
+    color: #fff;
+    background: none;
+    cursor: pointer; }
+.galleryPopup .popupList .arrow { position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+    background: none;
+    cursor: pointer; }
+.galleryPopup .popupList .prev { left: -5%; }
+.galleryPopup .popupList .next { right: -5%; }
+
+
+
+
+/* 다섯번째 section - skills */
+.skills { font-family: 'Merriweather'; 
+    text-align: center; 
+    margin-top: 200px; }
+.skillContainer { height: 100%; 
+    text-align: left;  }
+.skillContainer span { font-size: 15px; 
+    font-weight: bold; 
+    text-align: left; 
+    display: inline-block; 
+    width: 9%; }
+.skillContainer > div { width: 100%; 
+    margin: 20px 0; }
+.skillContainer .myscore { height: 20px; width: 0%;
+    line-height: 20px;
+    text-align: right;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+    padding-right: 10px;
+    opacity: 0;
+}
+
+.skillContainer .photoshop .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: photoshopscore 1s both; }
+.skillContainer .illustrator .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: illstratorscore 1s both 0.5s; }
+.skillContainer .indesign .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: indesigncore 1s both 1s; }
+.skillContainer .premiere .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: premierescore 1s both 1.5s; }
+.skillContainer .rhino .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: rhinoscore 1s both 2s; }
+
+
+@keyframes photoshopscore {
+    0% { width: 0%; }
+    100% { width: 90%; opacity: 1; }
+}
+@keyframes illstratorscore {
+    0% { width: 0%; }
+    100% { width: 90%; opacity: 1; }
+}
+@keyframes indesigncore {
+    0% { width: 0%; }
+    100% { width: 70%; opacity: 1; }
+}
+@keyframes premierescore {
+    0% { width: 0%; }
+    100% { width: 50%; opacity: 1; }
+}
+@keyframes rhinoscore {
+    0% { width: 0%; }
+    100% { width: 50%; opacity: 1; }
+}
+
+
+
+/* 여섯번째 section - contact me */
+#contact { background: url(../images/bg4.jpg); 
+    height: 100%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; }
+.contact { font-family: 'Merriweather'; 
+    text-align: center; 
+    padding-top: 150px; 
+    color: #fff; }
+.contact h2 { font-size: 42px; }
+.contact span { display: block; 
+    font-size: 15px; 
+    padding: 30px 0 80px 0;}
