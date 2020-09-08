@@ -187,7 +187,7 @@ body, html, #wrap { height: 100%; }
     text-align: center; 
     margin-top: 200px; }
 .portfolio h2, .skills h2 { font-size: 42px; }
-.portfolio span, .skills span { display: block; 
+.portfolio span { display: block; 
     font-size: 15px; 
     padding: 30px 0 80px 0;}
 .portfolio ul.gallery { height: 100%; }
@@ -239,15 +239,23 @@ body, html, #wrap { height: 100%; }
 .skills { font-family: 'Merriweather'; 
     text-align: center; 
     margin-top: 200px; }
+.skills span { display: block; 
+    font-size: 15px; 
+    padding: 30px 0 50px 0; }
 .skillContainer { height: 100%; 
     text-align: left;  }
 .skillContainer span { font-size: 15px; 
     font-weight: bold; 
     text-align: left; 
     display: inline-block; 
-    width: 9%; }
+    width: 9%; 
+    font-family: 'Merriweather'; }
+.skillContainer:hover h3 { background: #000;
+    color: #fff; width: 10%; }
+.skillContainer h3 { margin: 20px 0;
+    font-family: 'Merriweather' }
 .skillContainer > div { width: 100%; 
-    margin: 20px 0; }
+    margin: 10px 0; }
 .skillContainer .myscore { height: 20px; width: 0%;
     line-height: 20px;
     text-align: right;
@@ -255,6 +263,7 @@ body, html, #wrap { height: 100%; }
     border-radius: 20px;
     font-size: 12px;
     color: #fff;
+    margin: 5px 0;
     padding-right: 10px;
     opacity: 0;
 }
@@ -264,13 +273,24 @@ body, html, #wrap { height: 100%; }
 .skillContainer .illustrator .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
     animation: illstratorscore 1s both 0.5s; }
 .skillContainer .indesign .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
-    animation: indesigncore 1s both 1s; }
+    animation: indesignscore 1s both 1s; }
 .skillContainer .premiere .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
     animation: premierescore 1s both 1.5s; }
 .skillContainer .rhino .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
     animation: rhinoscore 1s both 2s; }
 
+.skillContainer .html .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: htmlscore 1s both; }
+.skillContainer .css .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: cssscore 1s both 0.5s; }
+.skillContainer .js .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: jsscore 1s both 1s; }
+.skillContainer .jq .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: jqscore 1s both 1.5s; }
+.skillContainer .react .myscore { background: linear-gradient(50deg, #eee, #555, #000); 
+    animation: reactscore 1s both 2s; }
 
+/* 디자인 스킬 */
 @keyframes photoshopscore {
     0% { width: 0%; }
     100% { width: 90%; opacity: 1; }
@@ -279,7 +299,7 @@ body, html, #wrap { height: 100%; }
     0% { width: 0%; }
     100% { width: 90%; opacity: 1; }
 }
-@keyframes indesigncore {
+@keyframes indesignscore {
     0% { width: 0%; }
     100% { width: 70%; opacity: 1; }
 }
@@ -292,7 +312,27 @@ body, html, #wrap { height: 100%; }
     100% { width: 50%; opacity: 1; }
 }
 
-
+/* 코딩 스킬 */
+@keyframes htmlscore {
+    0% { width: 0%; }
+    100% { width: 90%; opacity: 1; }
+}
+@keyframes cssscore {
+    0% { width: 0%; }
+    100% { width: 80%; opacity: 1; }
+}
+@keyframes jsscore {
+    0% { width: 0%; }
+    100% { width: 60%; opacity: 1; }
+}
+@keyframes jqscore {
+    0% { width: 0%; }
+    100% { width: 60%; opacity: 1; }
+}
+@keyframes reactscore {
+    0% { width: 0%; }
+    100% { width: 50%; opacity: 1; }
+}
 
 /* 여섯번째 section - contact me */
 #contact { background: url(../images/bg4.jpg); 
