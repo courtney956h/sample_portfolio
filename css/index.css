@@ -125,7 +125,7 @@ body, html, #wrap { height: 100%; }
     color: #fff; }
 .about_header .border {
     border-top: 2px solid #000;
-    width: 100%;
+    width: 75%;
     position: absolute;
     top: 51%; left: 25%;
 }
